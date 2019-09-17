@@ -18,18 +18,18 @@
 
 <body>
     <div class="container bgcolor">
-        <form>
+        <form action="auth\login.php" method="POST">
             <div class="form-group">
                 <p class="login">Login to continue</p>
                 <!-- <label for="exampleInputEmail1">Email address</label> -->
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                <input type="email" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                     placeholder="Username" required>
                 <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
                     else.</small> -->
             </div>
             <div class="form-group">
                 <!-- <label for="exampleInputPassword1">Password</label> -->
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+                <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
             </div>
             <div class="form-group form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -37,11 +37,16 @@
                 <a href="#" class="forgotPassword">Forgot Password</a>
             </div>
             <button type="submit" class="btn btn-dark">Login</button>
+            <input type="hidden" name="submitted" value="1">
             <p class="signup">or sign-up using</p>
             <div class="images">
                 <a href="https://twitter.com/"><img src="images/twitterVector.jpg" alt="Twitter Image"></a>
                 <a href="https://facebook.com/"><img src="images/facebook-brands2.svg" alt="facebook image"></a>
                 <a href="https://google.com/"><img src="images/google-brands2.svg" alt="Google Image"></a>
+            </div>
+            <div>
+                <p>Email: admin@example.com</p>
+                <p>Password: teamruby19</p>
             </div>
 
         </form>
